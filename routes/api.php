@@ -8,6 +8,7 @@ Route::post('add-student',[StudentController::class,'store']);
 Route::get('students',[StudentController::class,'index']);
 Route::get('edit-student/{id}',[StudentController::class,'editStudent']);
 Route::put('update-student/{id}',[StudentController::class,'updateStudent']);
+Route::delete('delete-student/{id}',[StudentController::class,'destroy']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
